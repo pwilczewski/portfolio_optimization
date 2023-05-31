@@ -45,10 +45,6 @@ def generate_data(n):
         weights = portfolio_optimization(mu, sigma)
         sharpe_ratios.append(-objective_function(weights, mu, sigma))
 
-        #print("Optimal portfolio weights:", weights)
-        #print("Portfolio return:", mu @ weights)
-        #print("Sharpe ratio:", mu @ weights / np.sqrt(weights.T @ sigma @ weights))
-
         # process data for modeling
         data_x.append(list(mu) + list(sigma.flatten()))
         data_y.append(weights)
