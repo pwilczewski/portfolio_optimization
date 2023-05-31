@@ -1,5 +1,19 @@
 import scipy.optimize as sco
 import numpy as np
+from torch.utils.data import Dataset
+
+class SharpeData(Dataset):
+    def __init__(self, X, Y):
+        self.X = X
+        self.Y = Y
+
+    def __len__(self):
+        return len(self.X)
+
+    def __getitem__(self, index):
+        x = self.X[index]
+        y = self.Y[index]
+        return x, y
 
 # minimizing negative sharpe ratio
 def objective_function(weights, mu, sigma):
