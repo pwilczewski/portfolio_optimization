@@ -1,3 +1,3 @@
-# Approximately Efficient Frontiers
+# Approximately optimal portfolios
 
-Can DNNs learn to approximate optimal asset allocations?
+Link to Substack
